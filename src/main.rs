@@ -79,5 +79,9 @@ fn main() -> io::Result<()> {
     }
     search_phrase_in_files(dir_path, &file_extension, &phrase)?;
 
+    println!("Нажмите Enter для выхода...");
+    let mut pause = String::new();
+    io::stdin().read_line(&mut pause)?;
+
     Ok(())
 }
